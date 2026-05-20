@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vimemo"
+version = "0.1.0"
+description = "Exploratory viral membrane morphometry tools for cryo-EM maps"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib",
+    "mrcfile",
+    "numpy",
+    "pandas",
+    "plotly",
+    "scikit-learn",
+    "scipy",
+]
+
+[project.optional-dependencies]
+hammer-overlay = [
+    "alphashape",
+    "shapely",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["vimemo*"]

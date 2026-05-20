@@ -1,7 +1,7 @@
-import src.io as jio
-import src.calc as C
-from src.cryoemsurvey import CryoEMSurvey
-from src.maximamodel import MaximaModel
+import vimemo.io as jio
+import vimemo.calc as C
+from vimemo.cryoemsurvey import CryoEMSurvey
+from vimemo.maximamodel import MaximaModel
 
 # USER DEFINED VARIABLES SECTION
 
