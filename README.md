@@ -1,8 +1,8 @@
 # ViMeMo
 
-ViMeMo is a small Python package and notebook workflow for exploratory viral membrane morphometry from cryo-EM maps.
+ViMeMo (**Viral Membrane Morphometry**) is a small Python package and notebook workflow for exploratory viral membrane morphometry from cryo-EM maps.
 
-The current codebase covers the workflow extracted from `test_memcurv.ipynb`:
+The current codebase covers a notebook-driven workflow for:
 
 - load `.mrc` maps
 - survey density along radial directions
@@ -10,7 +10,8 @@ The current codebase covers the workflow extracted from `test_memcurv.ipynb`:
 - assign membrane leaflets
 - diagnose and remove outliers
 - calculate spacing and curvature morphometrics
-- generate diagnostic 3D plots and Hammer-projection plots
+- generate diagnostic 3D plots for different stages of cleanup
+- generate final Hammer-projection plots
 
 The package is intentionally notebook-driven at this stage. The main supported entry point is [vimemo_run.ipynb](./vimemo_run.ipynb), where parameters remain visible and editable at each step.
 
@@ -18,7 +19,6 @@ The package is intentionally notebook-driven at this stage. The main supported e
 
 - `vimemo/`: reusable package code
 - `vimemo_run.ipynb`: thin runner notebook for the current workflow
-- `test_memcurv.ipynb`: original exploratory notebook the package was extracted from
 - `my_output_notebook.ipynb`: legacy downstream analysis notebook kept for reference
 - `hammer_contour_griddata.ipynb`: legacy Hammer-plot exploration notebook kept for reference
 
@@ -132,7 +132,7 @@ The notebook then computes the direction vectors and samples density along them.
 
 ### 4. Build and clean a `MaximaModel`
 
-The surveyed density data is converted into a `MaximaModel`, then the notebook runs the same exploratory cleaning sequence used in `test_memcurv.ipynb`:
+The surveyed density data is converted into a `MaximaModel`, then the notebook runs an explicit exploratory cleaning sequence:
 
 - initial clustering
 - cluster selection
