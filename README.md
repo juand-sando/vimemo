@@ -146,7 +146,7 @@ This stage is still meant to be interactive. The notebook exposes the parameters
 
 The cleaned maxima dataframe is passed into `MembraneMorphometry`, which immediately assigns leaflet labels. At this point the notebook can already show leaflet-colored diagnostic plots.
 
-### 6. Diagnose and remove outliers
+### 6. Diagnose and remove outliers at the leaflet level
 
 Outliers are diagnosed within each leaflet using local neighborhood distances. The notebook lets you inspect the resulting outlier score before removing flagged points.
 
